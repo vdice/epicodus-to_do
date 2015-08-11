@@ -1,4 +1,7 @@
 class Task
+
+  @@task_array = []
+
   define_method(:initialize) do |description|
     @description = description
   end
@@ -7,8 +10,12 @@ class Task
     @description
   end
 
+  define_method(:save) do
+    @@task_array.push(self)
+  end
+
   define_singleton_method(:all) do
-    []
+    @@task_array
   end
 
 
