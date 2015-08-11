@@ -13,5 +13,4 @@ post("/tasks") do
   task = Task.new(description)
   task.save()
   erb(:success)
-
 end
