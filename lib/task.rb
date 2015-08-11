@@ -18,5 +18,7 @@ class Task
     @@task_array
   end
 
-
+  define_singleton_method(:clear) do
+    @@task_array = []
+  end
 end
